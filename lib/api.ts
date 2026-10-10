@@ -241,6 +241,37 @@ export function firstChannel(
 }
 
 // ---------------------------------------------------------------------------
+// Platform stats
+// ---------------------------------------------------------------------------
+
+/**
+ * A count safe to print. Past 10 the API rounds it down to a ten the real
+ * figure is above and marks it approximate, so it reads "20+" and never
+ * overstates.
+ */
+export type PlatformCount = {
+  value: number;
+  approximate: boolean;
+};
+
+export type PlatformStats = {
+  restaurants: PlatformCount;
+  foods: PlatformCount;
+};
+
+/** Null when unreachable, so the caller can fall back to copy without numbers. */
+export async function getPlatformStats(): Promise<PlatformStats | null> {
+  const result = await apiGet<PlatformStats>("/meta/platform-stats");
+  return result.ok && result.data?.restaurants ? result.data : null;
+}
+
+/** "3,000+" for a rounded count, "7" for an exact one. */
+export function formatPlatformCount(count: PlatformCount): string {
+  const value = count.value.toLocaleString("en-US");
+  return count.approximate ? `${value}+` : value;
+}
+
+// ---------------------------------------------------------------------------
 // Legal documents
 // ---------------------------------------------------------------------------
 

@@ -4,7 +4,9 @@ import { ChevronRight, Facebook, Music2 } from "lucide-react";
 import { Button } from "../ui/button";
 import {
   channelValues,
+  formatPlatformCount,
   getContactDetails,
+  getPlatformStats,
   getServiceLocations,
   type ContactChannel,
 } from "@/lib/api";
@@ -52,10 +54,17 @@ const SOCIAL_CHANNELS: Array<{
 ];
 
 export default async function Footer() {
-  const [contactDetails, coverage] = await Promise.all([
+  const [contactDetails, coverage, stats] = await Promise.all([
     getContactDetails(),
     getServiceLocations(),
+    getPlatformStats(),
   ]);
+
+  // Only real counts are printed. Without them the line still reads, it just
+  // makes no claim about size.
+  const restaurants =
+    stats && stats.restaurants.value > 0 ? stats.restaurants : null;
+  const foods = restaurants && stats && stats.foods.value > 0 ? stats.foods : null;
 
   // Says something true about reach without naming anywhere. A partial list of
   // states read as the whole list, so someone served but unlisted would have
@@ -80,11 +89,26 @@ export default async function Footer() {
     <div className="footer_container">
       <div className="h-100 md:h-75 lh:h-100 pt-17 md:pt-5 lg:mt-15 relative flex flex-col gap-3 font-rubik justify-center items-center text-center font-bold text-3xl md:text-3xl lg:text-5xl text-white">
         <p>
-          Enjoy <span className="text-munchyellow">+3000</span> food from
+          Enjoy{" "}
+          {foods ? (
+            <span className="text-munchyellow">{formatPlatformCount(foods)}</span>
+          ) : (
+            "great"
+          )}{" "}
+          food from
         </p>
-        <p>
-          <span className="text-munchyellow">+500</span> Restaurants
-        </p>
+        {restaurants ? (
+          <p>
+            <span className="text-munchyellow">
+              {formatPlatformCount(restaurants)}
+            </span>{" "}
+            {restaurants.value === 1 && !restaurants.approximate
+              ? "Restaurant"
+              : "Restaurants"}
+          </p>
+        ) : (
+          <p>Restaurants near you</p>
+        )}
         <Button
           className="rounded-full py-2 h-11 md:h-9 lg:h-11 mt-5"
           style={{ paddingRight: "20px", paddingLeft: "20px" }}
