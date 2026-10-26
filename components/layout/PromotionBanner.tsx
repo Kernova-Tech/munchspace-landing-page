@@ -21,12 +21,12 @@ export default async function PromotionBanner() {
         <div className="text-6xl md:text-3xl lg:text-6xl p-10 py-20 font-semibold px-18 md:px-7 lg:px-18 absolute left-0 h-full flex items-center">
           <div>
             <h1>
-              First Delivery is{" "}
+              Enjoy{" "}
               <span className="bg-munchprimaryDark px-2 rounded-2xl rounded-tl-none">
-                Free.
+                Free
               </span>
+              Delivery <br></br>on Your First Order.
             </h1>
-            <h1>Download our app now.</h1>
             <div className="mt-7 flex gap-5">
               <Link
                 href={appStore ?? "/#download"}
@@ -66,7 +66,7 @@ export default async function PromotionBanner() {
               className="font-light underline text-sm flex gap-1 items-center mt-7 w-fit"
             >
               <Info className="w-4" />
-              <span>T & C apply</span>
+              <span>Terms & Conditions apply</span>
             </Link>
           </div>
         </div>
@@ -103,21 +103,20 @@ export default async function PromotionBanner() {
         />
         <div className="p-5">
           <h1 className="text-[1.6rem] font-semibold font-rubik">
-            First Delivery is{" "}
+            Enjoy{" "}
             <span className="bg-munchprimaryDark px-2 rounded-2xl rounded-tl-none">
-              Free.
-            </span>
+              Free
+            </span>{" "}
+            Delivery on Your First Order.
           </h1>
-          <h1 className="text-[1.6rem] font-semibold font-rubik whitespace-nowrap">
-            Download our app now.
-          </h1>
+
           <div className="mt-7 flex gap-5">
             <Link
-                href={appStore ?? "/#download"}
-                target={appStore ? "_blank" : undefined}
-                rel={appStore ? "noopener noreferrer" : undefined}
-                className="hover:scale-105"
-              >
+              href={appStore ?? "/#download"}
+              target={appStore ? "_blank" : undefined}
+              rel={appStore ? "noopener noreferrer" : undefined}
+              className="hover:scale-105"
+            >
               <Image
                 width={1000}
                 height={500}
@@ -129,11 +128,11 @@ export default async function PromotionBanner() {
               />
             </Link>
             <Link
-                href={playStore ?? "/#download"}
-                target={playStore ? "_blank" : undefined}
-                rel={playStore ? "noopener noreferrer" : undefined}
-                className="hover:scale-105"
-              >
+              href={playStore ?? "/#download"}
+              target={playStore ? "_blank" : undefined}
+              rel={playStore ? "noopener noreferrer" : undefined}
+              className="hover:scale-105"
+            >
               <Image
                 width={1000}
                 height={500}
@@ -150,7 +149,7 @@ export default async function PromotionBanner() {
             className="font-light underline text-sm flex gap-1 items-center mt-7 w-fit"
           >
             <Info className="w-4" />
-            <span>T & C apply</span>
+            <span>Terms & Conditions apply</span>
           </Link>
         </div>
       </section>

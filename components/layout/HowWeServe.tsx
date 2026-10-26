@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import React from 'react'
+import Image from "next/image";
+import React from "react";
 
 const HowWeServe = () => {
   return (
@@ -30,13 +30,12 @@ const HowWeServe = () => {
             }
           />
           <h3 className="font-semibold font-rubik text-center text-2xl md:text-xl lg:text-2xl mt-7">
-            Browse & Order
+            Discover & Order
           </h3>
           <p className="mt-2 text-slate-700 md:text-sm lg:text-base text-center">
-            Discover your favorite Restaurants/
-            <br className="md:hidden lg:inline" />
-            restaurants, meals, groceries, and
-            <br className="md:hidden lg:inline" /> place your order in seconds
+            Explore restaurants, browse menus and select the items you need. Add
+            your choices to your cart and place your order in just a few simple
+            steps.
           </p>
         </div>
         <div className="px-10 md:px-3 lg:px-10">
@@ -50,11 +49,11 @@ const HowWeServe = () => {
             }
           />
           <h3 className="font-semibold font-rubik text-center text-2xl md:text-xl lg:text-2xl mt-7">
-            We Pick & Pack
+            Your Order Is Prepared
           </h3>
           <p className="mt-2 text-slate-700 md:text-sm lg:text-base text-center">
-            Our trusted partners and smart <br /> system prepare your order with
-            care.
+            The restaurant or store prepares your order, with care taken to
+            ensure the selected items are ready for collection
           </p>
         </div>
         <div className="px-10 md:px-3 lg:px-10">
@@ -68,16 +67,16 @@ const HowWeServe = () => {
             }
           />
           <h3 className="font-semibold font-rubik text-center text-2xl mt-7  md:text-xl lg:text-2xl">
-            We Deliver to You
+            Delivered to Your Door
           </h3>
           <p className="mt-2 text-slate-700 md:text-sm lg:text-base text-center">
-            Riders deliver right to your door. <br /> Fresh, fast, and always on
+            Our rider deliver right to your door. Fresh, fast, and always on
             time.
           </p>
         </div>
       </div>
     </section>
   );
-}
+};
 
-export default HowWeServe
+export default HowWeServe;

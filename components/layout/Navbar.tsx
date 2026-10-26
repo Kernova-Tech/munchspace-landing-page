@@ -19,9 +19,7 @@ export default function Navbar({ appLinks }: { appLinks: AppLinks }) {
    * a desktop, or a store that has not been published — it falls through to the
    * section showing both, which is the only honest answer when we cannot tell.
    */
-  const handleDownloadClick = (
-    event: React.MouseEvent<HTMLAnchorElement>,
-  ) => {
+  const handleDownloadClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     const ua = navigator.userAgent;
     // Modern iPads report as Macs, distinguishable only by touch support.
     const isApple =
@@ -69,8 +67,8 @@ export default function Navbar({ appLinks }: { appLinks: AppLinks }) {
     { label: "Where we deliver", href: "/where-we-deliver" },
     { label: "Join as a Vendor", href: "/join-as-a-vendor" },
     { label: "Join as a Rider", href: "/join-as-a-rider" },
-    { label: "About MunchSpace", href: "/about" },
-    { label: "Contact Us", href: "/contact" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -78,7 +76,7 @@ export default function Navbar({ appLinks }: { appLinks: AppLinks }) {
       <header
         className={cn(
           "max-w-450 mx-auto bg-black px-6 py-7 rounded-b-2xl text-white transition-transform duration-700 ease-in-out",
-          visible ? "translate-y-0" : "-translate-y-full"
+          visible ? "translate-y-0" : "-translate-y-full",
         )}
       >
         <div className="mx-auto flex items-center justify-between">
@@ -116,7 +114,7 @@ export default function Navbar({ appLinks }: { appLinks: AppLinks }) {
           </nav>
           <Link href="/#download" onClick={handleDownloadClick}>
             <Button className="bg-munchorange hidden lg:block h-11 hover:bg-munchprimaryDark rounded-full px-6 cursor-pointer">
-              Download the app
+              Download
             </Button>
           </Link>
 
@@ -125,14 +123,14 @@ export default function Navbar({ appLinks }: { appLinks: AppLinks }) {
             <Menu
               className={cn(
                 "text-white w-7 h-7 hidden",
-                !showMobileNav && "block"
+                !showMobileNav && "block",
               )}
               onClick={() => setShowMobileNav(true)}
             />
             <X
               className={cn(
                 "text-white w-7 h-7 hidden",
-                showMobileNav && "block"
+                showMobileNav && "block",
               )}
               onClick={() => setShowMobileNav(false)}
             />
@@ -143,7 +141,7 @@ export default function Navbar({ appLinks }: { appLinks: AppLinks }) {
         <div
           className={cn(
             "overflow-hidden transition-max-height duration-700 ease-in-out",
-            showMobileNav ? "max-h-96" : "max-h-0"
+            showMobileNav ? "max-h-96" : "max-h-0",
           )}
         >
           <div className="mt-9 flex flex-col items-end pb-1">

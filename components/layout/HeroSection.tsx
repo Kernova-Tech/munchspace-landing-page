@@ -24,24 +24,24 @@ export default function HeroSection() {
         {/* Left: Text and Input */}
         <div className="md:text-left md:col-span-2 lg:col-span-1 animate-slide-in delay-300 relative">
           <h1 className="text-[3.2rem]/18 md:text-[2.9rem]/14 lg:text-7xl font-bold text-gray-900 font-rubik mb-6">
-            Fastest <span className="text-munchprimary">Food</span>
+            Good Food.
             <p className="md:mt-3">
-              <span className="text-munchprimary">Delivery</span> & More
+              <span className="text-munchprimary">Everyday Essentials.</span>{" "}
+              Delivered.
             </p>
           </h1>
 
           {/* Testimonial */}
           <div className="flex items-center gap-4 mb-8 max-w-md md:mx-0">
             <Image
-              src="https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767345223/testimonial_bau5b1.png"
+              src="https://i.postimg.cc/rwZY1r7d/testimonial-black-person.png"
               alt="Customer testimonial"
               width={100}
               height={100}
               className="rounded-full h-15 md:h-10 w-15 md:w-10 object-cover"
             />
             <p className="text-gray-700 md:text-xs">
-              When you are too tired to <br /> cook...MunchSpace got you
-              covered.
+              Craving Something Delicious? <br /> MunchSpace got you covered.
             </p>
           </div>
 
@@ -51,12 +51,12 @@ export default function HeroSection() {
               <MapPin className="absolute ms-2 text-gray-700" />
               <Input
                 type="text"
-                placeholder="Enter your address to explore ..."
+                placeholder="Enter your delivery address to get started"
                 className="md:flex-1 ps-10 bg-white border-gray-300 h-13 md:h-12 rounded-2xl"
               />
             </div>
             <button className="bg-green-800 z-20 w-fit whitespace-nowrap hover:bg-green-700 h-17 -ms-5 -mt-2 md:mt-0 -md:ms-10 md:h-15 rounded-2xl text-white md:rounded-xl px-4 md:w-fit">
-              <span className="hidden md:inline">Explore Restaurants</span>
+              <span className="hidden md:inline">Explore Nearby</span>
               <ArrowUpRight className="md:hidden h-8 w-8" />
             </button>
           </div>
@@ -67,7 +67,7 @@ export default function HeroSection() {
           {/* Curved orange line decoration */}
 
           <Image
-            src="https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767344659/girleating1_uvtrdh.png"
+            src="https://i.postimg.cc/DydggX4S/4B4255DF-0AE6-4569-B174-1646CF889845.png"
             alt="Happy customer enjoying pizza delivery"
             width={450}
             height={500}
