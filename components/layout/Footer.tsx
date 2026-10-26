@@ -64,7 +64,8 @@ export default async function Footer() {
   // makes no claim about size.
   const restaurants =
     stats && stats.restaurants.value > 0 ? stats.restaurants : null;
-  const foods = restaurants && stats && stats.foods.value > 0 ? stats.foods : null;
+  const foods =
+    restaurants && stats && stats.foods.value > 0 ? stats.foods : null;
 
   // Says something true about reach without naming anywhere. A partial list of
   // states read as the whole list, so someone served but unlisted would have
@@ -91,7 +92,9 @@ export default async function Footer() {
         <p>
           Enjoy{" "}
           {foods ? (
-            <span className="text-munchyellow">{formatPlatformCount(foods)}</span>
+            <span className="text-munchyellow">
+              {formatPlatformCount(foods)}
+            </span>
           ) : (
             "great"
           )}{" "}
@@ -130,8 +133,8 @@ export default async function Footer() {
                   { name: "Join as a Vendor", link: "/join-as-a-vendor" },
                   { name: "Join as a Rider", link: "/join-as-a-rider" },
                   { name: "Where we deliver", link: "/where-we-deliver" },
-                  { name: "About MunchSpace", link: "/about" },
-                  { name: "Contact Us", link: "/contact" },
+                  { name: "About", link: "/about" },
+                  { name: "Contact", link: "/contact" },
                 ].map((item) => (
                   <li key={item.name}>
                     <Link
@@ -187,7 +190,10 @@ export default async function Footer() {
                       >
                         {phone.value}
                         {phone.label ? (
-                          <span className="text-gray-400"> · {phone.label}</span>
+                          <span className="text-gray-400">
+                            {" "}
+                            · {phone.label}
+                          </span>
                         ) : null}
                       </a>
                     ))}

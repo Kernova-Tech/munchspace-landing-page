@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import React from 'react'
+import Image from "next/image";
+import React from "react";
 
 const SpeedDelivery = () => {
   return (
@@ -10,14 +10,15 @@ const SpeedDelivery = () => {
       <div className="px-5 md:px-0 text-white md:flex md:ms-7 lg:ms-14 items-center relative">
         <div className="md:absolute">
           <h1 className="text-3xl md:text-2xl lg:text-[2.5rem] font-semibold font-rubik">
-            The Fastest <br />{" "}
+            Convenience <br />{" "}
             <span className="md:whitespace-">
-              <span className="text-munchprimary">Food Delivery</span> in town
+              <span className="text-munchprimary">That Fits</span> your day
             </span>
           </h1>
           <p className="mt-3 md:text-sm lg:text-base">
-            Hot meals, cold drinks, and everything in{" "}
-            <br className="md:hidden" /> between, delivered in minutes.
+            Whether you're ordering lunch at work, dinner at home, or essentials
+            for the week, MunchSpace helps you spend less time running errands
+            and more time on what matters.
           </p>
         </div>
       </div>
@@ -48,10 +49,12 @@ const SpeedDelivery = () => {
             />
             <div>
               <h1 className="font-medium font-rubik md:text-sm lg:text-base">
-                Smart AI Delivery
+                Smart ordering, Smooth delivery
               </h1>
               <p className="text-slate-300 text-sm md:text-xs lg:text-sm">
-                Faster routes. Smarter timing. <br /> Always on time.
+                We use technology to help coordinate orders and delivery
+                journeys, making it easier to connect customers with local
+                businesses and delivery partners.
               </p>
             </div>
           </div>
@@ -70,8 +73,9 @@ const SpeedDelivery = () => {
                 All-in-One Delivery
               </h1>
               <p className="text-slate-300 text-sm md:text-xs lg:text-sm">
-                Your everyday delivery from <br /> meals to markets, we bring it
-                all.
+                From meals and groceries to pharmacy essentials, MunchSpace
+                brings participating local businesses together in one convenient
+                place.
               </p>
             </div>
           </div>
@@ -79,6 +83,6 @@ const SpeedDelivery = () => {
       </div>
     </section>
   );
-}
+};
 
-export default SpeedDelivery
+export default SpeedDelivery;

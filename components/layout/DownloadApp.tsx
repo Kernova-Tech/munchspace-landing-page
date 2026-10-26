@@ -26,7 +26,7 @@ const DownloadApp = async () => {
         <div className="flex items-center justify-center w-full absolute h-full">
           <div className="text-white mt-15">
             <h1 className="font-rubik font-bold text-3xl lg:text-5xl">
-              Download our app <br /> and start ordering.
+              Your next order <br /> is just a tap away.
             </h1>
             <div className="mt-3 lg:mt-7 flex gap-5">
               <Link
@@ -77,7 +77,7 @@ const DownloadApp = async () => {
       <div className="md:hidden mx-3">
         <Image
           src={
-            "https://res.cloudinary.com/dj2ybe6v0/image/upload/q_auto/v1767345488/iphone131_ga90uf.png"
+            "https://i.postimg.cc/tg6rPCP1/Munch-Spaces-Food-Delivery-App-Mockup.png"
           }
           width={1000}
           height={1500}
@@ -86,16 +86,16 @@ const DownloadApp = async () => {
         />
         <div className="bg-munchorange w-full rounded-4xl p-5 pt-60">
           <h1 className="font-bold text-3xl text-white font-rubik text-center">
-            Download our app <br />{" "}
-            <span className="whitespace-nowrap">and start ordering.</span>
+            Your next order <br />{" "}
+            <span className="whitespace-nowrap">is just a tap away.</span>
           </h1>
           <div className="mt-7 flex gap-2 mb-5 mx-auto justify-center">
             <Link
-                href={appStore ?? "#download"}
-                target={appStore ? "_blank" : undefined}
-                rel={appStore ? "noopener noreferrer" : undefined}
-                className="hover:scale-105"
-              >
+              href={appStore ?? "#download"}
+              target={appStore ? "_blank" : undefined}
+              rel={appStore ? "noopener noreferrer" : undefined}
+              className="hover:scale-105"
+            >
               <Image
                 width={1000}
                 height={500}
@@ -107,11 +107,11 @@ const DownloadApp = async () => {
               />
             </Link>
             <Link
-                href={playStore ?? "#download"}
-                target={playStore ? "_blank" : undefined}
-                rel={playStore ? "noopener noreferrer" : undefined}
-                className="hover:scale-105"
-              >
+              href={playStore ?? "#download"}
+              target={playStore ? "_blank" : undefined}
+              rel={playStore ? "noopener noreferrer" : undefined}
+              className="hover:scale-105"
+            >
               <Image
                 width={1000}
                 height={500}
